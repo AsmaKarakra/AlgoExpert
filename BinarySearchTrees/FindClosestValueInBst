@@ -1,0 +1,67 @@
+/**
+
+
+Time: O(h) where h is the height of the BST
+Space: O(1) because the solution is iterative 
+**/ 
+
+public class playground {
+
+        public static int findClosestValueInBst(BST tree, int target) {
+
+            if (tree == null){
+                return -1;
+            }
+
+            int currentVal = tree.value;
+            int minDiff = Integer.MAX_VALUE;
+            int currentAbs;
+
+            while (tree != null) {
+                currentAbs = Math.abs(tree.value - target);
+                if (currentAbs < minDiff){
+                    minDiff = currentAbs;
+                    currentVal = tree.value;
+                }
+
+                if(tree.value == target) {
+                    return tree.value;
+                }
+                else if (tree.value > target && tree.left != null){
+                    tree = tree.left;
+                }
+                else if (tree.value < target&& tree.right != null) {
+                    tree = tree.right;
+                }
+                else{
+                    break;
+                }
+            }
+            return currentVal;
+        }
+
+        static class BST {
+            public int value;
+            public BST left;
+            public BST right;
+
+            public BST(int value) {
+                this.value = value;
+            }
+        }
+        
+        //Driver code//
+
+        public static void main (String [] args){
+            BST tree = new BST(10);
+            tree.left = new BST(5);
+            tree.right = new BST(15);
+            tree.right.left = new BST(13);
+            tree.right.right = new BST(22);
+            tree.left.left = new BST(2);
+            tree.left.right = new BST(5);
+            tree.left.left.left = new BST(1);
+            tree.right.left.right = new BST(14);
+            findClosestValueInBst(tree,12);
+        }
+    }
