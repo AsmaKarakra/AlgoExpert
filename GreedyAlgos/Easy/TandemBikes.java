@@ -11,22 +11,9 @@ Space: O(1)
 
 import java.util.*;
 
-public class Playground {
+class Program {
 
-    public static void main(String[] args) {
-
-        int[] redShirtSpeeds = new int[] {5, 5, 3, 9, 2};
-        int[] blueShirtSpeeds = new int[] {3, 6, 7, 2, 1};
-        boolean fastest = true;
-
-        int result = tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest);
-
-        System.out.println(result);
-
-
-    }
-
-    public static int tandemBicycle(int[] redShirtSpeeds, int[] blueShirtSpeeds, boolean fastest) {
+public static int tandemBicycle(int[] redShirtSpeeds, int[] blueShirtSpeeds, boolean fastest) {
 
 
     //Sort the arrays using quick sort java API - average o(n*log(n))
@@ -48,10 +35,13 @@ public class Playground {
         int minValue = 0;
         int minSpeed = 0;
 
+        
+        //Choose biggest value out of two large values for min speed we can create from array 
+        
         for(int i = 0; i<redShirtSpeeds.length; i++){
             int currentRed = redShirtSpeeds[i];
-            int currentBlue = blueShirtSpeeds[blueShirtSpeeds.length - 1 - i];
-            minSpeed = Math.min(currentRed, currentBlue);
+            int currentBlue = blueShirtSpeeds[i];
+            minSpeed = Math.max(currentRed, currentBlue);
             minValue += minSpeed;
         }
 
@@ -62,6 +52,8 @@ public class Playground {
     public static int calcMaxSpeed(int[] redShirtSpeeds, int[] blueShirtSpeeds){
         int maxValue = 0;
         int maxSpeed = 0;
+        
+        //pair one big idx and one small idx for maxSpeed 
 
         for(int i = 0; i<redShirtSpeeds.length; i++){
             int currentRed = redShirtSpeeds[i];
@@ -73,6 +65,4 @@ public class Playground {
         return maxValue;
 
     }
-
 }
-
