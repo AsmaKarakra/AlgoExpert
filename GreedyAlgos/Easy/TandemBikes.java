@@ -2,9 +2,9 @@
 /**
 
 
-Time: O(n*log(n))
+Time: O(n*log(n)) - sort using quick sort in java API. 
 
-Space: O(1) 
+Space: O(1) - Arrays are sorted in place 
 
 
 **/
