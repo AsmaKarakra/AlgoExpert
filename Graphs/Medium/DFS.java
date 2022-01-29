@@ -25,12 +25,11 @@ class Program {
     //DFS method is within graph class 
 
     public List<String> depthFirstSearch(List<String> array) {
-			array.add(this.name); 
-			
-			for(int i = 0; i < children.size(); i++){
-				Node child = children.get(i); 
-				child.depthFirstSearch(array);
-			}
+	    array.add(this.name); 
+	    for(int i = 0; i < children.size(); i++){
+		Node child = children.get(i); 
+		child.depthFirstSearch(array);
+	    }
 			
       return array;
     }
