@@ -1,16 +1,3 @@
-# Dynamic Programming Patterns for Coding Interviews
-
-- Pattern 1: 0/1 Knapsack
-
-- Pattern 2: Unbounded Knapsack
-
-- Pattern 3: Fibonnaci Numbers
-
-- Pattern 4: Longest Palindromic Subsequence
-
-- Patter 5: Longest Common Substring 
-
-
 # DynamicProgramming
 ## Memorization Recipe: Use if you dont need to solve all sub problems 
 
@@ -70,3 +57,18 @@
  
  **Cons**
   - Uses more space due to every entry in table being filled 
+
+
+# Dynamic Programming Patterns for Coding Interviews
+
+- Pattern 1: 0/1 Knapsack
+
+- Pattern 2: Unbounded Knapsack
+
+- Pattern 3: Fibonnaci Numbers
+
+- Pattern 4: Longest Palindromic Subsequence
+
+- Patter 5: Longest Common Substring 
+
+
