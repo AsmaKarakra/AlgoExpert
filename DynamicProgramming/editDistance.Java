@@ -1,6 +1,6 @@
 /**
 
-Time: O(n+m) n = length of str1 and m = length of str 2
+Time: O(n*m) n = length of str1 and m = length of str 2
 
 Space: O(n*m) n = length of str1 and m = length of str 2
 
