@@ -4,6 +4,10 @@ Time: O(n*m) n = length of str1 and m = length of str 2
 
 Space: O(n*m) n = length of str1 and m = length of str 2
 
+
+- can improve the space complexity to o(min(n,m)) by only storing the last two rows in the dp table and update
+  throughout our algorithim. 
+
 **/
 
 
